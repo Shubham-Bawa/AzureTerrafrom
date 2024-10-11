@@ -77,5 +77,6 @@ jobs:
           ARM_TENANT_ID: ${{ secrets.TENANT_ID }}
         run: terraform apply 
 
+
           
       
