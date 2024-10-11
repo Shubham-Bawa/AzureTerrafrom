@@ -1,6 +1,6 @@
 resource "azurerm_virtual_machine" "vm1" {
   name                  = "testetstetestvm"
-  resource_group_name   = "TerraformRG"
+  resource_group_name   = "GitHubAct_RG"
   location              = "East US"
   network_interface_ids = [azurerm_network_interface.nic1.id]
   vm_size               = "Standard_DS1_v2"
@@ -46,7 +46,7 @@ resource "azurerm_virtual_network" "vnet1" {
 
 resource "azurerm_subnet" "subnet1" {
   name                 = "hrmante"
-  resource_group_name  = "TerraformRG"
+  resource_group_name  = "GitHubAct_RG"
   virtual_network_name = azurerm_virtual_network.vnet1.name
   address_prefixes     = ["10.0.2.0/24"]
 }
@@ -66,7 +66,7 @@ resource "azurerm_network_interface" "nic1" {
 
 resource "azurerm_public_ip" "public1" {
   name = "testetstetest-tywteywgjh"
-  resource_group_name = "TerraformRG"
+  resource_group_name = "GitHubAct_RG"
   location = "East US"
   allocation_method = "Static"
 
